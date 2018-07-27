@@ -1,0 +1,6 @@
+<text>template1</text>
+<template name="template1">
+  <view>
+    <text>time:{{time}}</text>
+  </view>
+</template>

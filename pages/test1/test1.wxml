@@ -1,0 +1,7 @@
+<!--pages/test/test1.wxml-->
+<import src="../template1.wxml" />
+<text wx:if="{{condition}}">{{data}}</text>
+<view style='flex-direction:column;display: flex;'>
+  <text wx:for="{{arrayData}}">{{item}}</text>
+  <template is="template1" data="{{time}}"></template>
+</view>
