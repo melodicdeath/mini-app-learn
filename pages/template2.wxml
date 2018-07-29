@@ -1,0 +1,4 @@
+<view class='footer'>
+  <view class='nav_home'>首页</view>
+  <view class='nav_cart'>购物车</view>
+</view>

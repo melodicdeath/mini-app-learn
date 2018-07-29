@@ -1,2 +1,10 @@
 <!--pages/test3/test3.wxml-->
-<text>pages/test3/test3.wxml</text>
+<view class='container3'>
+  <!-- 减号 -->
+	<text class="{{minusStatus}}" bindtap="minusTap">-</text>
+	<!-- 数值 -->
+	<input type="number" bindchange="numChange" value="{{num}}" />
+	<!-- 加号 -->
+	<text class="normal" bindtap="plusTap">+</text>
+
+</view>

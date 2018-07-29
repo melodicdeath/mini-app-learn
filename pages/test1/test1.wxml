@@ -1,7 +1,19 @@
 <!--pages/test/test1.wxml-->
-<import src="../template1.wxml" />
+<!-- <import src="../template1.wxml" />
 <text wx:if="{{condition}}">{{data}}</text>
 <view style='flex-direction:column;display: flex;'>
   <text wx:for="{{arrayData}}">{{item}}</text>
   <template is="template1" data="{{time}}"></template>
+</view> -->
+
+<view class="container1">
+  <view class="nav_left">
+    <view class="nav_left_item {{curNav == item?'active':''}}" wx:for="{{navLeftItems}}" wx:key="*this" data-id="{{item}}" bindtap="navLeftItemTap">{{item}}</view>
+  </view>
+  <view class="content">
+    <view class='content_item' wx:for="{{currentItems}}">
+      <image src='http://placeholder.qiniudn.com/50x30'></image>
+      <text>{{item}}</text>
+    </view>
+  </view>
 </view>

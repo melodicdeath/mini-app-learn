@@ -1,2 +1,18 @@
 <!--pages/test4/test4.wxml-->
-<text>pages/test4/test4.wxml</text>
+<view class='container4'>
+  <view class='header'>
+    <text>商品列表</text>
+    <navigator src='#'>更多</navigator>
+  </view>
+  <view class='list'>
+    <view class='item'>
+      <image src='http://img2.imgtn.bdimg.com/it/u=1167272381,3361826143&fm=23&gp=0.jpg'></image>
+      <view class='item_desc'>
+        <text class='item_desc_title'>女装T恤中长款大码摆裙春夏新款</text>
+        <text class='item_desc_price'>￥21.00</text>
+        <image src='http://bpic.588ku.com/element_origin_min_pic/18/06/10/55ebd9c025b44685b71af0f25aee26f0.jpg'></image>
+      </view>
+    </view>
+  </view>
+  <include src='/pages/template2.wxml' />
+</view>

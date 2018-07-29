@@ -1,3 +1,15 @@
 <!--pages/test2/test2.wxml-->
-<include src="../template1.wxml" /> <!--data="{{1970-01-01}}"-->
-<text>{{ip}}</text>
+<!--data="{{1970-01-01}}"-->
+<!-- <include src="../template1.wxml" />
+<text>{{ip}}</text> -->
+
+<view class='container2'>
+  <image src='https://img.alicdn.com/tps/i4/TB1Np2OyRmWBuNkSndVSuwsApXa.jpg_q90_.webp'></image>
+  <image src='https://img.alicdn.com/simba/img/TB1i6SluER1BeNjy0FmSuv0wVXa.jpg'></image>
+  <view class='menu_list'>
+    <view class='menu' wx:for='{{menu.imgUrls}}'>
+      <image src='{{item}}'></image>
+      <text>{{menu.descs[index]}}</text>
+    </view>
+  </view>
+</view>

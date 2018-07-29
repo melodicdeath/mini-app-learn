@@ -1,1 +1,68 @@
 /* pages/test4/test4.wxss */
+
+.container4 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 5px;
+}
+
+.header {
+  font-size: 14px;
+  background-color: lightgray;
+}
+
+.header navigator {
+  float: right;
+}
+
+.footer {
+  width: 100%;
+  height: 50px;
+  background-color: darkkhaki;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+}
+
+.footer view {
+  width: 50%;
+}
+
+.list {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+.item{
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #ddd;
+  align-content: space-between;
+}
+
+.list .item image {
+  width: 80px;
+  height: 80px;
+}
+
+.item_desc .item_desc_title{
+  display: inline-block;
+  max-height: 30%;
+}
+.item_desc .item_desc_price{
+  display: inline-block;
+  height: 70%;
+}
+
+.item_desc image {
+  max-width: 40px;
+  max-height: 40px;
+  float: right;
+}
