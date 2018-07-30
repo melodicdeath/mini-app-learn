@@ -5,6 +5,7 @@
   flex-direction: column;
   height: 100%;
   padding: 5px;
+  font-size: 14pt;
 }
 
 .header {
@@ -36,11 +37,12 @@
 
 .list {
   margin-top: 5px;
-  display: flex;
-  flex-direction: row;
+  margin-bottom: 50px;
 }
 
 .item{
+  width: 100%;
+  padding: 0;
   display: flex;
   flex-direction: row;
   border-bottom: 1px solid #ddd;
@@ -52,17 +54,24 @@
   height: 80px;
 }
 
-.item_desc .item_desc_title{
-  display: inline-block;
-  max-height: 30%;
-}
-.item_desc .item_desc_price{
-  display: inline-block;
-  height: 70%;
+.item_desc{
+  width: 100%;
 }
 
-.item_desc image {
+.item_desc .item_desc_title{
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.item_desc view{
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.item_desc view image {
   max-width: 40px;
   max-height: 40px;
-  float: right;
 }
