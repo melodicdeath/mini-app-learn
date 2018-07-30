@@ -5,8 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    goodslist: [
-      {
+    goodslist: [{
         id: "001",
         imgUrl: "http://img5.imgtn.bdimg.com/it/u=2906541843,1492984080&fm=23&gp=0.jpg",
         name: "女装T恤中长款大码摆裙春夏新款",
@@ -56,60 +55,80 @@ Page({
       },
     ]
   },
+  add2cart: function(e) {
+    let arr = wx.getStorageSync('cart') || [];
+    console.log(arr)
+    let match = arr.filter((element, index) => {
+      return element.id == e.target.dataset.id
+    })
 
+    if (match.length == 1) {
+      match[0].count++
+      console.log(match[0])
+    } else {
+      let goods = this.data.goodslist.filter(element => {
+        return element.id == e.target.dataset.id
+      })[0]
+      goods.count = 1
+      console.log(goods)
+      arr.push(goods)
+    }
+
+    wx.setStorageSync('cart', arr)
+  },
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-  
+  onLoad: function(options) {
+
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-  
+  onReady: function() {
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-  
+  onShow: function() {
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
-  
+  onHide: function() {
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
-  
+  onUnload: function() {
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
-  
+  onPullDownRefresh: function() {
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
-  
+  onReachBottom: function() {
+
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-  
+  onShareAppMessage: function() {
+
   }
 })

@@ -1,0 +1,25 @@
+<!--pages/test5/test5.wxml-->
+<view class='container5'>
+  <view class='list'>
+    <view class='item' wx:for='{{list}}'>
+      <image src='{{item.imgUrl}}'></image>
+      <view class='item_desc'>
+        <text class='item_desc_title'>{{item.name}}</text>
+        <view>
+          <text class='item_desc_price'>￥{{item.price}}</text>
+          <view class='container3'>
+            <text class="{{item.count == 1?'disabled':'normal'}}" bindtap="minusTap" data-id='{{item.id}}'>-</text>
+            <input type="number" bindchange="numChange" value="{{item.count}}" data-id='{{item.id}}'/>
+            <text class="normal" bindtap="plusTap" data-id='{{item.id}}'>+</text>
+          </view>
+          <image src='http://bpic.588ku.com/element_origin_min_pic/18/06/10/55ebd9c025b44685b71af0f25aee26f0.jpg' bindtap='removeTap' data-id='{{item.id}}'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='total'>
+    <text>合计：{{totalPrice}}</text>
+    <button>去结算({{totalNum}})</button>
+  </view>
+  <include src='/pages/template2.wxml' />
+</view>

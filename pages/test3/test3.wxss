@@ -35,7 +35,7 @@ input {
   border-right: 1px solid #ccc;
 }
 
-text {
+.container3 text {
   width: 19px;
   line-height: 26px;
 }

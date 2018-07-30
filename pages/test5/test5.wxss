@@ -1,0 +1,28 @@
+/* pages/test5/test5.wxss */
+@import "/pages/test3/test3.wxss";
+@import "/pages/test4/test4.wxss";
+.container5 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 5px;
+  font-size: 14pt;
+}
+
+.container3 {
+	max-height: 26px;
+}
+
+.list{
+  margin-bottom: 0;
+}
+
+.total{
+  margin-top:5px;
+  margin-bottom:55px;
+}
+
+.total text{
+  display: block;
+  text-align: right;
+}

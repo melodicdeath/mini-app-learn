@@ -11,7 +11,7 @@
         <text class='item_desc_title'>{{item.name}}</text>
         <view>
           <text class='item_desc_price'>￥{{item.price}}</text>
-          <image src='http://bpic.588ku.com/element_origin_min_pic/18/06/10/55ebd9c025b44685b71af0f25aee26f0.jpg'></image>
+          <image src='http://bpic.588ku.com/element_origin_min_pic/18/06/10/55ebd9c025b44685b71af0f25aee26f0.jpg' bindtap='add2cart' data-id='{{item.id}}'></image>
         </view>
       </view>
     </view>
