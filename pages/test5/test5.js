@@ -5,7 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list: []
+    list: [],
+    total:0,
+
   },
 
   /**
@@ -29,7 +31,12 @@ Page({
     let list = wx.getStorageSync('cart') || [];
     console.log(list)
     this.setData({
-      list: list
+      list: list,
+      total: list.length > 0 ?list.map(d => {
+        return parseFloat(d.price) * parseFloat(d.count)
+      }).reduce((prev, next) => {
+        return prev + next
+      }):0
     })
   },
   removeTap: function(e) {
@@ -43,7 +50,12 @@ Page({
 
     wx.setStorageSync('cart', this.data.list)
     this.setData({
-      list: this.data.list
+      list: this.data.list,
+      total: this.data.list.length > 0 ? this.data.list.map(d => {
+        return parseFloat(d.price) * parseFloat(d.count)
+      }).reduce((prev, next) => {
+        return prev + next
+      }) : 0
     })
   },
   minusTap: function(e) {
@@ -56,9 +68,16 @@ Page({
     }
 
     current.count--
-      wx.setStorageSync('cart', this.data.list)
+    wx.setStorageSync('cart', this.data.list)
+
+    
     this.setData({
-      list: this.data.list
+      list: this.data.list,
+      total: this.data.list.length > 0 ? this.data.list.map(d => {
+        return parseFloat(d.price) * parseFloat(d.count)
+      }).reduce((prev, next) => {
+        return prev + next
+      }) : 0
     })
   },
   plusTap: function(e) {
@@ -67,9 +86,14 @@ Page({
     })[0];
 
     current.count++
-      wx.setStorageSync('cart', this.data.list)
+    wx.setStorageSync('cart', this.data.list)
     this.setData({
-      list: this.data.list
+      list: this.data.list,
+      total: this.data.list.length > 0 ? this.data.list.map(d => {
+        return parseFloat(d.price) * parseFloat(d.count)
+      }).reduce((prev, next) => {
+        return prev + next
+      }) : 0
     })
   },
   numChange: function(e) {
@@ -80,7 +104,12 @@ Page({
     current.count = e.detail.value
     wx.setStorageSync('cart', this.data.list)
     this.setData({
-      list: this.data.list
+      list: this.data.list,
+      total: this.data.list.length > 0 ? this.data.list.map(d => {
+        return parseFloat(d.price) * parseFloat(d.count)
+      }).reduce((prev, next) => {
+        return prev + next
+      }) : 0
     })
   },
   /**

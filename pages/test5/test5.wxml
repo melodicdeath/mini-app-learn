@@ -1,6 +1,6 @@
 <!--pages/test5/test5.wxml-->
-<view class='container5'>
-  <view class='list'>
+<view class='container5' style='{{list.length == 0 ? "display:none":""}}'>
+  <view class='list' >
     <view class='item' wx:for='{{list}}'>
       <image src='{{item.imgUrl}}'></image>
       <view class='item_desc'>
@@ -17,9 +17,7 @@
       </view>
     </view>
   </view>
-  <view class='total'>
-    <text>合计：{{totalPrice}}</text>
-    <button>去结算({{totalNum}})</button>
-  </view>
+  <button>去结算（{{total}}）</button>
   <include src='/pages/template2.wxml' />
 </view>
+<text style='{{list.length > 0 ? "display:none":""}}'>购物车里没有东西</text>
